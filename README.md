@@ -16,8 +16,8 @@ Time spent: `15`
 - [X] User can compose a new tweet by tapping on a compose button.
 - [X] User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
 - [X] User can retweet, favorite, and reply to the tweet directly from the timeline feed.
-A few part still need some fix:
-- autolayout has minor issue, it's content reorganized after selection. 
+
+#### Partially done:
 - wired up reply, retweet and favorite events, but have not implemented the api request yet. will finish it.
 
 #### Optional
