@@ -42,9 +42,9 @@
     [[TwitterClient sharedInstance] homeTimelineWithParams:nil completion:^(NSArray *tweets, NSError *error) {
         [self.TweetsTableView reloadData];
         self.myTweets = [NSArray arrayWithArray:tweets];
-        //for (Tweet *t in self.myTweets){
-        //NSLog(@"%@", t.text);
-        //}
+        for (Tweet *t in self.myTweets){
+            NSLog(@"%@", t.text);
+        }
         [self.TweetsTableView reloadData];
         [refreshControl endRefreshing];
         NSLog(@"refreshing done!");
@@ -68,6 +68,7 @@
     [self.TweetsTableView addSubview:refreshControl];
     
     self.TweetsTableView.rowHeight = UITableViewAutomaticDimension;
+    self.TweetsTableView.estimatedRowHeight = 50;
     
     [self reloadDatas];
 }

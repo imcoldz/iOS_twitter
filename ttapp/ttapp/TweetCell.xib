@@ -16,6 +16,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="tzH-l9-UjE">
                         <rect key="frame" x="8" y="8" width="48" height="48"/>
+                        <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="48" id="Gph-Tv-M83"/>
                             <constraint firstAttribute="height" constant="48" id="irf-Mn-RNh"/>
@@ -41,9 +42,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qs-D3-R1C">
                         <rect key="frame" x="64" y="41" width="248" height="57.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="248" id="edI-tp-eOv"/>
-                        </constraints>
                         <string key="text">S.Korean coast guard officer sentenced to 4 years for negligence in rescue of people from doomed ferry Sewol. said.http://t.co/P4u70y7rb0 </string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -78,7 +76,6 @@
                     <constraint firstItem="tzH-l9-UjE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7wc-HZ-q8V"/>
                     <constraint firstItem="2nH-RP-q0c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="8Sr-0q-ibt"/>
                     <constraint firstItem="K76-Jk-0fm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FLt-7l-xiE"/>
-                    <constraint firstItem="6qs-D3-R1C" firstAttribute="leading" secondItem="tzH-l9-UjE" secondAttribute="trailing" constant="8" id="U5I-or-r9M"/>
                     <constraint firstItem="FrZ-my-eA6" firstAttribute="top" secondItem="6qs-D3-R1C" secondAttribute="bottom" constant="10" id="UuW-JZ-lfZ"/>
                     <constraint firstItem="quA-U7-4YL" firstAttribute="leading" secondItem="tzH-l9-UjE" secondAttribute="trailing" constant="8" id="ViD-fz-ACg"/>
                     <constraint firstItem="quA-U7-4YL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Y0h-k2-qlc"/>
@@ -92,6 +89,7 @@
                     <constraint firstItem="FrZ-my-eA6" firstAttribute="leading" secondItem="HrQ-r8-5Z1" secondAttribute="trailing" constant="40" id="p6G-ly-mPa"/>
                     <constraint firstItem="UlH-1H-oAt" firstAttribute="leading" secondItem="tzH-l9-UjE" secondAttribute="trailing" constant="8" id="rot-7O-tgU"/>
                     <constraint firstItem="6qs-D3-R1C" firstAttribute="top" secondItem="UlH-1H-oAt" secondAttribute="bottom" constant="2.5" id="sZ2-fc-DIs"/>
+                    <constraint firstItem="6qs-D3-R1C" firstAttribute="leading" secondItem="tzH-l9-UjE" secondAttribute="trailing" constant="8" id="uuY-tn-ss9"/>
                     <constraint firstItem="2nH-RP-q0c" firstAttribute="top" secondItem="6qs-D3-R1C" secondAttribute="bottom" constant="10" id="wVA-zP-Alo"/>
                 </constraints>
                 <variation key="default">
@@ -107,7 +105,6 @@
                 <outlet property="replyImageView" destination="2nH-RP-q0c" id="BN5-km-SsB"/>
                 <outlet property="retweetImageView" destination="HrQ-r8-5Z1" id="CNV-Sb-1OC"/>
                 <outlet property="screenNameLabel" destination="UlH-1H-oAt" id="MBr-ZL-ZKw"/>
-                <outlet property="textLabel" destination="6qs-D3-R1C" id="Cfd-1u-dpK"/>
                 <outlet property="timeLabel" destination="K76-Jk-0fm" id="KX8-Vz-nec"/>
                 <outlet property="tweetTextLabel" destination="6qs-D3-R1C" id="U4C-0W-dVv"/>
             </connections>
