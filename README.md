@@ -31,4 +31,4 @@ A few part still need some fix:
 
 ### Walkthrough
 
-![Video Walkthrough](https://github.com/imcoldz/iOS_twitter/blob/master/ttapp_walktrough2.gif)
+![Video Walkthrough](https://github.com/imcoldz/iOS_twitter/blob/master/ttapp_walktrough.gif)
