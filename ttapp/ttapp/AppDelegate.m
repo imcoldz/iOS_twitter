@@ -26,6 +26,19 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidLogout) name:UserDidLogoutNotifiction object:nil];
     
+    //styling the navigation bar
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowOffset = CGSizeMake(0.0, 0.3);
+    shadow.shadowColor = [UIColor blackColor];
+    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],
+       NSShadowAttributeName:shadow,
+       NSFontAttributeName:[UIFont boldSystemFontOfSize:14.0]
+       }
+     forState:UIControlStateNormal];
+    
     User * user = [User currentUser];
     if([User currentUser] != nil){
         //currentUser not nil do something here...

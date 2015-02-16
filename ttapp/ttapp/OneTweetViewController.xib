@@ -44,14 +44,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URU-ck-Osw">
-                    <rect key="frame" x="8" y="161" width="359" height="50.5"/>
+                    <rect key="frame" x="8" y="161" width="359" height="51"/>
                     <string key="text">Steve Strange, lead singer of 1980s pop band Visage, has died aged 55 following heart attack, his record label says http://bbc.in/1DKBjMk </string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/11/2015, 01:44 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrb-XW-S1e">
-                    <rect key="frame" x="8" y="221" width="126.5" height="16"/>
+                    <rect key="frame" x="8" y="221" width="127" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
                     <nil key="highlightedColor"/>

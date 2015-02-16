@@ -29,6 +29,22 @@ NSString * const UserDidLogoutNotifiction = @"UserDidLogoutNotification";
         self.screenName = dictionary[@"screen_name"];
         self.profileImageUrl = dictionary[@"profile_image_url"];
         self.tagline = dictionary[@"description"];
+        self.bannerImageUrl = dictionary[@"profile_banner_url"];
+        self.tweetNumber = [NSNumber numberWithInt:0];
+        self.followingNumber = [NSNumber numberWithInt:0];
+        self.followerNumber = [NSNumber numberWithInt:0];
+        if (dictionary[@"statuses_count"]){
+            //NSLog(@"following from api response: %@", dictionary[@"following"]);
+            self.tweetNumber = dictionary[@"statuses_count"];
+        }
+        if (dictionary[@"following"]){
+            //NSLog(@"following from api response: %@", dictionary[@"following"]);
+            self.followingNumber = dictionary[@"following"];
+        }
+        if (dictionary[@"followers_count"]){
+            //NSLog(@"followers_count from api response: %@", dictionary[@"followers_count"]);
+            self.followerNumber = dictionary[@"followers_count"];
+        }
     }
     return self;
 }

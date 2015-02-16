@@ -63,7 +63,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     NSString *statusString = self.composeTextView.text;
     [params setObject:statusString forKey:@"status"];
-    [[TwitterClient sharedInstance] updateWithParams:params completion:^(NSError *error) {
+    [[TwitterClient sharedInstance] updateWithParams:params completion:^(NSObject * responseObject, NSError *error) {
         if(error==nil){
             NSLog(@"ComposeViewController: status updated without error.");
         }else{

@@ -19,6 +19,8 @@
 
 - (void) homeTimelineWithParams:(NSDictionary *)params completion:(void(^)(NSArray * tweets, NSError *error))completion;
 
-- (void) updateWithParams:(NSDictionary *)params completion:(void(^)(NSError *error))completion;
+- (void) updateWithParams:(NSDictionary *)params completion:(void(^)(NSObject * responseObject, NSError *error))completion;
+
+- (void) loadUserTweetsWithParams:(NSDictionary *)params completion:(void(^)(NSArray * tweets, NSError *error))completion;
 
 @end

@@ -46,6 +46,12 @@
     favoriteTap.numberOfTouchesRequired = 1;
     [self.favoriteImageView addGestureRecognizer:favoriteTap];
     [self.favoriteImageView setUserInteractionEnabled:YES];
+    
+    UITapGestureRecognizer *profileTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(profileImageTapped)];
+    profileTap.numberOfTapsRequired = 1;
+    profileTap.numberOfTouchesRequired = 1;
+    [self.profileImageView addGestureRecognizer:profileTap];
+    [self.profileImageView setUserInteractionEnabled:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -95,6 +101,11 @@
     }else{
         [self.favoriteImageView setImage:[UIImage imageNamed:@"favorite_default"]];
     }
+}
+
+- (void) profileImageTapped{
+    NSLog(@"profile tapped!");
+    [self.delegate didTapProfileImage:self];
 }
 
 - (void) retweetTapped{

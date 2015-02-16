@@ -87,13 +87,24 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     } ];
 }
 
-- (void) updateWithParams:(NSDictionary *)params completion:(void(^)(NSError *error))completion{
+- (void) updateWithParams:(NSDictionary *)params completion:(void(^)(NSObject *responseObject, NSError *error))completion{
     [self POST:@"1.1/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSArray *tweets = [Tweet tweetsWithArray:responseObject];
         //NSLog(@"home_timeline tweets: %@", responseObject);
-        completion(nil);
+        completion(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion(error);
+        completion(nil, error);
+    } ];
+}
+
+- (void) loadUserTweetsWithParams:(NSDictionary *)params completion:(void(^)(NSArray *tweets, NSError *error))completion{
+    [self GET:@"1.1/statuses/user_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        //NSLog(@"user_timeline tweets: %@", responseObject);
+        completion(tweets, nil);
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
     } ];
 }
 

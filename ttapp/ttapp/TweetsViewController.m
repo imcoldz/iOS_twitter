@@ -13,8 +13,9 @@
 #import "TweetCell.h"
 #import "ComposeViewController.h"
 #import "OneTweetViewController.h"
+#import "ProfileViewController.h"
 
-@interface TweetsViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface TweetsViewController ()<UITableViewDataSource, UITableViewDelegate, TweetCellDelegate>
 {
     UIRefreshControl* refreshControl;
 }
@@ -40,13 +41,13 @@
 - (void)reloadDatas{
     //grab data from twitterclient
     [[TwitterClient sharedInstance] homeTimelineWithParams:nil completion:^(NSArray *tweets, NSError *error) {
-        [self.TweetsTableView reloadData];
         self.myTweets = [NSArray arrayWithArray:tweets];
-        for (Tweet *t in self.myTweets){
-            NSLog(@"%@", t.text);
-        }
+//        for (Tweet *t in self.myTweets){
+//            NSLog(@"%@", t.text);
+//        }
         [self.TweetsTableView reloadData];
         [refreshControl endRefreshing];
+        [self.TweetsTableView reloadData];
         NSLog(@"refreshing done!");
     }];
 }
@@ -101,6 +102,7 @@
     //NSLog(@"%@", t.author.name);
     cell.tweet = t;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    cell.delegate = self;
     return cell;
 }
 
@@ -112,8 +114,16 @@
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     Tweet * t = self.myTweets[indexPath.row];
     vc.tweet = t;
-    NSLog(@"after vc.tweet=t, stored tweet user name is %@", vc.tweet.author.name);
+    //NSLog(@"after vc.tweet=t, stored tweet user name is %@", vc.tweet.author.name);
     //[self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
+
+-(void)didTapProfileImage:(TweetCell *)cell{
+    NSLog(@"Filter view controller got the Profile Image tap from cell.");
+    ProfileViewController * vc = [[ProfileViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.user = cell.tweet.author;
     [self presentViewController:nvc animated:YES completion:nil];
 }
 /*
