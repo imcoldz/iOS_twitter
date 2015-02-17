@@ -10,11 +10,13 @@
 #import "MenuViewController.h"
 #import "TweetsViewController.h"
 
-@interface ContainerViewController ()
+@interface ContainerViewController ()<MenuViewControllerDelegate>
 
 @property (nonatomic, strong) MenuViewController * menuVC;
 
-@property (nonatomic, strong) TweetsViewController * tweetsVC;
+@property (nonatomic, strong) UINavigationController * nvc;
+
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -24,18 +26,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.menuVC = [[MenuViewController alloc] init];
-    self.tweetsVC = [[TweetsViewController alloc] init];
-
-    [self displayContentController:self.tweetsVC];
+    self.menuVC.view.frame = self.contentView.frame;
+    self.menuVC.delegate = self;
+    [self.contentView addSubview:self.menuVC.view];
+    
+    self.nvc = [[UINavigationController alloc] initWithRootViewController:[[TweetsViewController alloc] init]];
+    self.nvc.view.frame = self.contentView.frame;
+    [self.contentView addSubview:self.nvc.view];
+    
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onCustomPan:)];
-    [self.navigationController.view addGestureRecognizer:panGestureRecognizer];
-    
-    
-    //[self addChildViewController:self.tweetsVC];
-    //self.tweetsVC.view.frame = self.view.frame;
-    //[self.view addSubview:self.tweetsVC.view];
-    //[self.tweetsVC didMoveToParentViewController:self];
-    //[self.view addGestureRecognizer:panGestureRecognizer];
+    [self.contentView addGestureRecognizer:panGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,36 +44,45 @@
 }
 
 
-- (void) displayContentController: (UIViewController*) content;
-{
-    [self.navigationController addChildViewController:content];// 1
-    content.view.frame = self.navigationController.view.frame; // 2
-    [self.navigationController.view addSubview:content.view];
-    [content didMoveToParentViewController:self];          // 3
-}
-
-- (void) hideContentController: (UIViewController*) content
-{
-    [content willMoveToParentViewController:nil];  // 1
-    [content.view removeFromSuperview];            // 2
-    [content removeFromParentViewController];      // 3
-}
-
 - (void)onCustomPan:(UIPanGestureRecognizer *)sender {
     CGPoint translation = [sender translationInView:self.navigationController.view];
-    CGRect frame = self.tweetsVC.view.frame;
-    frame.origin.x = translation.x;
-    //self.tweetsVC.view.frame = frame;
-    self.tweetsVC.view.frame = frame;
+    CGPoint velocity = [sender velocityInView:self.navigationController.view];
+    
+    //# version no.1
+    if( sender.state == UIGestureRecognizerStateBegan){}
+    else if (sender.state == UIGestureRecognizerStateChanged){
+        if(translation.x>0){
+            CGRect frame = self.nvc.view.frame;
+            frame.origin.x = translation.x;
+            self.nvc.view.frame = frame;
+        }
+    }
+    else if  (sender.state == UIGestureRecognizerStateEnded){
+    
+        if (velocity.x>0){
+            //moving to right
+            [UIView animateWithDuration:0.6 animations:^{
+                CGRect frame = self.nvc.view.frame;
+                frame.origin.x=200;
+                self.nvc.view.frame = frame;
+            }];
+        }
+        else{
+            [UIView animateWithDuration:0.6 animations:^{
+                CGRect frame = self.nvc.view.frame;
+                frame.origin.x = 0;
+                self.nvc.view.frame = frame;
+            }];
+        }
+    }
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) didTapHomeline:(MenuViewController *)mvc{
+    NSLog(@"from ContainerViewController - got homeline button clicked signal!");
+    [UIView animateWithDuration:0.6 animations:^{
+        CGRect frame = self.nvc.view.frame;
+        frame.origin.x = 0;
+        self.nvc.view.frame = frame;
+    }];
 }
-*/
-
 @end

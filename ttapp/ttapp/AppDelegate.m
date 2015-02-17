@@ -11,7 +11,6 @@
 #import "TwitterClient.h"
 #import "User.h"
 #import "Tweet.h"
-#import "TweetsViewController.h"
 #import "ContainerViewController.h"
 
 @interface AppDelegate ()
@@ -44,11 +43,8 @@
     if([User currentUser] != nil){
         //currentUser not nil do something here...
         NSLog(@"Welcome back, %@", user.name);
-        //TweetsViewController * tvc = [[TweetsViewController alloc] init];
-        //UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tvc];
         ContainerViewController * cvc = [[ContainerViewController alloc] init];
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:cvc];
-        self.window.rootViewController = nvc;
+        self.window.rootViewController = cvc;
     }else{
         NSLog(@"Not Logged in");
         self.window.rootViewController = [[LoginViewController alloc] init];

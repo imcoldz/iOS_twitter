@@ -14,6 +14,8 @@
 		E2527CD41A926720000B33CB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2527CD21A926720000B33CB /* MenuViewController.xib */; };
 		E2527CD81A926740000B33CB /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2527CD61A926740000B33CB /* ContainerViewController.m */; };
 		E2527CD91A926740000B33CB /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2527CD71A926740000B33CB /* ContainerViewController.xib */; };
+		E2527CE21A930004000B33CB /* MentionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2527CE01A930004000B33CB /* MentionsViewController.m */; };
+		E2527CE31A930004000B33CB /* MentionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2527CE11A930004000B33CB /* MentionsViewController.xib */; };
 		E27480C51A8D4FD100769ABD /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27480C31A8D4FD100769ABD /* ComposeViewController.m */; };
 		E27480C61A8D4FD100769ABD /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27480C41A8D4FD100769ABD /* ComposeViewController.xib */; };
 		E27480CA1A8D6B5F00769ABD /* OneTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27480C81A8D6B5F00769ABD /* OneTweetViewController.m */; };
@@ -56,6 +58,9 @@
 		E2527CD51A926740000B33CB /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		E2527CD61A926740000B33CB /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		E2527CD71A926740000B33CB /* ContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
+		E2527CDF1A930004000B33CB /* MentionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MentionsViewController.h; sourceTree = "<group>"; };
+		E2527CE01A930004000B33CB /* MentionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentionsViewController.m; sourceTree = "<group>"; };
+		E2527CE11A930004000B33CB /* MentionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MentionsViewController.xib; sourceTree = "<group>"; };
 		E27480C21A8D4FD100769ABD /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		E27480C31A8D4FD100769ABD /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		E27480C41A8D4FD100769ABD /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
@@ -164,6 +169,9 @@
 				E2527CD51A926740000B33CB /* ContainerViewController.h */,
 				E2527CD61A926740000B33CB /* ContainerViewController.m */,
 				E2527CD71A926740000B33CB /* ContainerViewController.xib */,
+				E2527CDF1A930004000B33CB /* MentionsViewController.h */,
+				E2527CE01A930004000B33CB /* MentionsViewController.m */,
+				E2527CE11A930004000B33CB /* MentionsViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 				E2527CD41A926720000B33CB /* MenuViewController.xib in Resources */,
 				E28247581A8C5CD600F6D345 /* TweetCell.xib in Resources */,
 				E2B7D9001A89B13B006956D7 /* LaunchScreen.xib in Resources */,
+				E2527CE31A930004000B33CB /* MentionsViewController.xib in Resources */,
 				E2B7D8FD1A89B13B006956D7 /* Images.xcassets in Resources */,
 				E2B7D9191A89BFB6006956D7 /* LoginViewController.xib in Resources */,
 			);
@@ -383,6 +392,7 @@
 				E2B7D91C1A89C3B8006956D7 /* TwitterClient.m in Sources */,
 				E27480CA1A8D6B5F00769ABD /* OneTweetViewController.m in Sources */,
 				E2B7D8F51A89B13B006956D7 /* AppDelegate.m in Sources */,
+				E2527CE21A930004000B33CB /* MentionsViewController.m in Sources */,
 				E2B7D9231A89E1E6006956D7 /* User.m in Sources */,
 				E27480C51A8D4FD100769ABD /* ComposeViewController.m in Sources */,
 				E2B7D9201A89E1CE006956D7 /* Tweet.m in Sources */,

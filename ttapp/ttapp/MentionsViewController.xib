@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MentionsViewController">
+            <connections>
+                <outlet property="nameLabel" destination="214-wp-GPT" id="kI8-NA-0X8"/>
+                <outlet property="profileImageView" destination="ldI-Ts-NeK" id="INT-f2-uod"/>
+                <outlet property="screenNameLabel" destination="cSP-dp-VXU" id="Kwy-7j-Gfj"/>
+                <outlet property="tweetsTableView" destination="pjg-oC-lUT" id="9oe-xR-YgR"/>
+                <outlet property="view" destination="yfC-yE-Lcy" id="7cO-xP-lsh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yfC-yE-Lcy">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldI-Ts-NeK">
+                    <rect key="frame" x="8" y="76" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="19h-r8-Zpi"/>
+                        <constraint firstAttribute="width" constant="48" id="JJW-bX-3Dk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Xiangyu Zhang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="214-wp-GPT">
+                    <rect key="frame" x="70" y="81" width="98.5" height="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="@DaneoZhang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSP-dp-VXU">
+                    <rect key="frame" x="70" y="108" width="87.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-Aq-bBy">
+                    <rect key="frame" x="166" y="323" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-uZ-lNm">
+                    <rect key="frame" x="0.0" y="132" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No mentions so far." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izi-xY-v6W">
+                            <rect key="frame" x="113" y="9" width="149" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-oC-lUT">
+                    <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cSP-dp-VXU" firstAttribute="top" secondItem="214-wp-GPT" secondAttribute="bottom" constant="10" id="5Ba-jQ-oLd"/>
+                <constraint firstItem="cSP-dp-VXU" firstAttribute="leading" secondItem="ldI-Ts-NeK" secondAttribute="trailing" constant="14" id="84x-CT-dM0"/>
+                <constraint firstItem="ldI-Ts-NeK" firstAttribute="top" secondItem="cSP-dp-VXU" secondAttribute="bottom" constant="60" id="BaQ-Xa-idA"/>
+                <constraint firstAttribute="trailing" secondItem="pjg-oC-lUT" secondAttribute="trailing" id="KWP-Ks-Mmk"/>
+                <constraint firstItem="cSP-dp-VXU" firstAttribute="top" secondItem="214-wp-GPT" secondAttribute="bottom" constant="10" id="e5A-YJ-BfY"/>
+                <constraint firstItem="pjg-oC-lUT" firstAttribute="top" secondItem="cSP-dp-VXU" secondAttribute="bottom" constant="8" id="j3A-Zc-9SU"/>
+                <constraint firstAttribute="bottom" secondItem="pjg-oC-lUT" secondAttribute="bottom" id="qob-IT-m4n"/>
+                <constraint firstItem="ldI-Ts-NeK" firstAttribute="top" secondItem="yfC-yE-Lcy" secondAttribute="top" constant="76" id="r9Y-tj-TFI"/>
+                <constraint firstItem="214-wp-GPT" firstAttribute="top" secondItem="yfC-yE-Lcy" secondAttribute="top" constant="81" id="rhr-H3-doU"/>
+                <constraint firstItem="ldI-Ts-NeK" firstAttribute="leading" secondItem="yfC-yE-Lcy" secondAttribute="leading" constant="8" id="wkg-kL-0Ve"/>
+                <constraint firstItem="pjg-oC-lUT" firstAttribute="leading" secondItem="yfC-yE-Lcy" secondAttribute="leading" id="wzL-2y-IaM"/>
+                <constraint firstItem="214-wp-GPT" firstAttribute="leading" secondItem="ldI-Ts-NeK" secondAttribute="trailing" constant="14" id="xhG-0b-9wn"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="BaQ-Xa-idA"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="622.5" y="621.5"/>
+        </view>
+    </objects>
+</document>

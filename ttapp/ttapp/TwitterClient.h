@@ -23,4 +23,6 @@
 
 - (void) loadUserTweetsWithParams:(NSDictionary *)params completion:(void(^)(NSArray * tweets, NSError *error))completion;
 
+- (void) loadUserMentionsWithParams:(NSDictionary *)params completion:(void(^)(NSArray * tweets, NSError *error))completion;
+
 @end

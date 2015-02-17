@@ -13,8 +13,55 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pks-91-hTn">
+                    <rect key="frame" x="32" y="220" width="69" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Homeline">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onHomelineTap:" destination="-1" eventType="touchUpInside" id="IFZ-dw-lQi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-ZF-lWS">
+                    <rect key="frame" x="32" y="317" width="67" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Mentions">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onMentionsTap:" destination="-1" eventType="touchUpInside" id="mCL-TQ-Ipn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-6o-8cE">
+                    <rect key="frame" x="32" y="123" width="46" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Profile">
+                        <color key="titleColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onProfileTap:" destination="-1" eventType="touchUpInside" id="oSV-Ll-F7i"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vnZ-ZF-lWS" firstAttribute="leading" secondItem="pks-91-hTn" secondAttribute="leading" id="5fo-sb-Pvy"/>
+                <constraint firstItem="fqy-6o-8cE" firstAttribute="leading" secondItem="pks-91-hTn" secondAttribute="leading" id="7Eb-js-oOQ"/>
+                <constraint firstItem="pks-91-hTn" firstAttribute="top" secondItem="fqy-6o-8cE" secondAttribute="bottom" constant="65" id="J46-ZN-UQx"/>
+                <constraint firstItem="vnZ-ZF-lWS" firstAttribute="top" secondItem="pks-91-hTn" secondAttribute="bottom" constant="65" id="Rx1-Jn-c8T"/>
+                <constraint firstItem="vnZ-ZF-lWS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="uKt-ZN-JNY"/>
+                <constraint firstAttribute="centerY" secondItem="vnZ-ZF-lWS" secondAttribute="centerY" id="ygy-vE-Lsd"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="428.5" y="505.5"/>
         </view>
     </objects>
 </document>

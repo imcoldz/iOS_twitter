@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ContainerViewController.h"
+
+@class MenuViewController;
+
+@protocol MenuViewControllerDelegate <NSObject>
+
+- (void)didTapHomeline:(MenuViewController *)mvc;
+
+@end
+
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, weak) id<MenuViewControllerDelegate> delegate;
 
 @end

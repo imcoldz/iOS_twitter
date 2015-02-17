@@ -7,8 +7,13 @@
 //
 
 #import "MenuViewController.h"
+#import "ProfileViewController.h"
+#import "MentionsViewController.h"
+
 
 @interface MenuViewController ()
+- (IBAction)onHomelineTap:(UIButton *)sender;
+- (IBAction)onMentionsTap:(UIButton *)sender;
 
 @end
 
@@ -33,5 +38,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onProfileTap:(UIButton *)sender {
+    ProfileViewController * vc = [[ProfileViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.user = [User currentUser];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
 
+- (IBAction)onHomelineTap:(UIButton *)sender {
+    NSLog(@"from MenuViewController homeline button tapped!");
+    [self.delegate didTapHomeline:self];
+}
+
+- (IBAction)onMentionsTap:(UIButton *)sender {
+    NSLog(@"from MenuViewController mentions button tapped!");
+    MentionsViewController * vc = [[MentionsViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.user = [User currentUser];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
 @end

@@ -8,7 +8,8 @@
 
 #import "LoginViewController.h"
 #import "TwitterClient.h"
-#import "TweetsViewController.h"
+
+#import "ContainerViewController.h"
 
 @interface LoginViewController ()
 
@@ -21,9 +22,8 @@
         if(user != nil){
             //modally present user's tweets view
             NSLog(@"welcome to %@", user.name);
-            TweetsViewController * tvc = [[TweetsViewController alloc] init];
-            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tvc];
-            [self presentViewController:nvc animated:YES completion:nil];
+            ContainerViewController * cvc = [[ContainerViewController alloc] init];
+            [self presentViewController:cvc animated:YES completion:nil];
         }else{
             //present error view
             NSLog(@"tiwtterclient login fail %@", user.name);
