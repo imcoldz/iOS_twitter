@@ -30,4 +30,4 @@ Time spent: `8`
 - [ ] Pulling down the profile page should blur and resize the header image.
 
 ### Walkthrough
-![Video Walkthrough]()
+![Video Walkthrough](https://github.com/imcoldz/iOS_twitter/blob/master/ttapp_walktrough_second.gif)
